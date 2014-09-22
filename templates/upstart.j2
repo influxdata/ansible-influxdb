@@ -6,7 +6,7 @@ stop on runlevel [016]
 respawn
 respawn limit 10 5
 
-limit nofile 60000 60000
+limit nofile unlimited unlimited
 
 env GOMAXPROCS={{influxdb_maxprocs}}
 

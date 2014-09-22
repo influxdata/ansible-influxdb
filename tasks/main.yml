@@ -58,3 +58,6 @@
   tags:
     - influxdb
     - iptables
+
+- name: Create Graphite Database
+  command: curl -X POST 'http://localhost:{{influxdb.api_port}}/db/{{influxdb.graphite_database}}?u=root&p=root'

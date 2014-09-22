@@ -1,6 +1,6 @@
 ---
 influxdb:
-  ver: "0.7.2"
+  ver: "0.8.2"
   dl_url: "http://s3.amazonaws.com/influxdb/{{ ver }}_amd64.deb"
   pkg: "/usr/local/src/{{ ver }}_amd64.deb"
   maxprocs: "{{ansible_processor_vcpus}}"
@@ -49,16 +49,13 @@ influxdb:
   max_open_shards: 0
   point_batch: 100
 
-  # [sharding]
-  repl_factor: 1
-  short_term_dur: "7d"
-  short_term_split: 1
-  long_term_dur: "30d"
-  long_term_split: 1
-
   # [wal]
   wal_dir: "/mnt/influxdb/wal"
   wal_flush: 1000
   wal_bookmark: 1000
   wal_index: 1000
   wal_logfile_req: 10000
+
+  # graphite
+  graphite_port: 2003
+  graphite_database: "metrics"

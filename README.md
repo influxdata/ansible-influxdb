@@ -1,7 +1,7 @@
 InfluxDB
 ========
 
-InfluxDB Ansible Galaxy role. Sets up a working InfluxDB serer
+InfluxDB Ansible Galaxy role. Sets up a working InfluxDB server
 
 Requirements
 ------------
@@ -11,10 +11,10 @@ Ansible version 1.6 and greater
 Role Variables
 --------------
 
-Variables are mostly what exists in the InfluxDB config file. Which you can see [here](http://influxdb.com/docs/v0.7/advanced_topics/configuration_options.html)
+Variables are mostly what exists in the InfluxDB config file. Which you can see [here](http://influxdb.com/docs/v0.8/advanced_topics/configuration_options.html)
 
 The `influxdb.hostname` variable may need to be set to something other than `ansible_default_ipv4.address` so make
-sure you setup takes this into account. Using EC2 you may need to gather facts first and use `ansible_ec2_public_hostname`
+sure your setup takes this into account. Using EC2 you may need to gather facts first and use `ansible_ec2_public_hostname`
 if public facing.
 
 Currenlty clustering is not taken into account for. This will be a `TODO` at a later date.

@@ -1,6 +1,6 @@
 ---
 galaxy_info:
-  author: mtchavez
+  author: influxdb
   description: InfluxDB
   license: MIT
   min_ansible_version: 1.6
@@ -18,3 +18,4 @@ galaxy_info:
     - database
     - database:nosql
     - monitoring
+    - devops
